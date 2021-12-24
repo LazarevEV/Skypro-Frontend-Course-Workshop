@@ -1,0 +1,21 @@
+.intro {
+    // min-height: 512px;
+    // min-height: 800px;
+    height: 800px;
+    max-height: 800px;
+    padding-top: 282px;
+    background: #000915;
+}
+
+.intro-header {
+    // max-width: 788px;
+    max-width: none;
+    line-height: 78px;
+    font-weight: 600;
+    font-size: 48px;
+    font-style: normal;
+}
+
+.game.image {
+    object-fit: cover;
+}

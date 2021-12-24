@@ -1,0 +1,140 @@
+.centered {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #FFFFFF;
+}
+
+.intro {
+  min-height: 1024px;
+  padding-top: 217px;
+  background-image: url("../img/intro_background.jpg");
+  background-size: cover;
+}
+
+.intro-header {
+  max-width: 788px;
+  line-height: 78px;
+  font-weight: 600;
+  font-size: 64px;
+  font-style: normal;
+}
+
+.intro-paragraph {
+  max-width: 481px;
+  line-height: 32px;
+  font-weight: 200;
+  font-size: 18px;
+  font-style: normal;
+  padding-top: 32px;
+}
+
+.intro-button {
+  width: 234px;
+  height: 48px;
+  background: #9C0332;
+  border: none;
+  border-radius: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin-top: 44px;
+}
+
+.intro-button:hover {
+  background: #EB443F;
+  cursor: url("../img/pointer_cursor.png"), auto;
+}
+
+.game-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  background: #000915;
+  padding-top: 128px;
+  padding-bottom: 128px;
+}
+
+.game-card {
+  min-width: 380px;
+  max-width: 380px;
+  min-height: 300px;
+  max-height: 300px;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  padding: 32px;
+}
+
+.game-card:hover {
+  outline: 3px solid #44D2FF;
+  cursor: url("../img/pointer_cursor.png"), auto;
+}
+
+.game-card:nth-child(1) {
+  background-image: url("../img/game_1.jpg");
+  background-size: cover;
+}
+
+.game-card:nth-child(2) {
+  background-image: url("../img/game_2.jpg");
+  background-size: cover;
+}
+
+.game-card:nth-child(3) {
+  background-image: url("../img/game_3.jpg");
+  background-size: cover;
+}
+
+.game-pane {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 800px;
+  max-height: 800px;
+  background: green;
+}
+
+.intro {
+  height: 800px;
+  max-height: 800px;
+  padding-top: 282px;
+  background: #000915;
+}
+
+.intro-header {
+  max-width: none;
+  line-height: 78px;
+  font-weight: 600;
+  font-size: 48px;
+  font-style: normal;
+}
+
+.game.image {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=style.css.map */
