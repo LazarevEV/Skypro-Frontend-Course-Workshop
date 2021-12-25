@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <title>ANAGRAM</title>
+    </head>
+    <body>
+        <div class="game-wrapper">
+            <div class="game-pane centered">
+                <div class="game-description">
+                    <h1 class="game-description intro-header">Анаграмма</h1>
+                    <p class="game-description intro-paragraph">Введи два и слова и проверь, являются ли слова анаграммой</p>
+                </div>
+                <div class="game-pane">
+                    <input class="game-input" type="text" id="input-one" name="input-one" placeholder="WORD 1" onchange="resetResultField()">
+                    <input class="game-input" type="text" id="input-two" name="input-two" placeholder="WORD 2" onchange="resetResultField()">
+                </div>
+                <div class="game-result">
+
+                </div>
+                <button class="basic-button" onclick="runGame(this.id)">RUN</button>
+            </div>
+            <img class="game-image" src="../img/game_image.png" alt="Game Cover">
+        </div>
+        <script src="../js/main.js"></script>
+    </body>
+</html>

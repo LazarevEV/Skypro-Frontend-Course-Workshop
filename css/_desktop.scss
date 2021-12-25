@@ -42,7 +42,7 @@ body {
     padding-top: 32px;
 }
 
-.intro-button {
+.basic-button {
     width: 234px;
     height: 48px;
     background: #9C0332;
@@ -59,7 +59,7 @@ body {
     margin-top: 44px;
 }
 
-.intro-button:hover {
+.basic-button:hover {
     background: #EB443F;
     cursor: url("../img/pointer_cursor.png"), auto;
 }
@@ -74,9 +74,11 @@ body {
 
 .game-card {
     min-width: 380px;
-    max-width: 380px;
+    width: 380px;
+    // max-width: 380px;
     min-height: 300px;
-    max-height: 300px;
+    height: 300px;
+    // max-height: 300px;
     border-radius: 24px;
 
     display: flex;
@@ -105,11 +107,4 @@ body {
 .game-card:nth-child(3) {
     background-image: url("../img/game_3.jpg");
     background-size: cover;
-}
-
-.game-pane {
-    display: flex;
-    min-height: 800px;
-    max-height: 800px;
-    background: green;
 }
