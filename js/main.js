@@ -18,10 +18,23 @@ function resetResultField() {
     };
 }
 
-// GAMES
+// DOESN'T WORK - HAVE TO ESTABLISH WEB SERVER
+function readJSON(file_path) {
+    // --> REQUIRE METHOD
+    // let json_string = require(file_path);
+    // alert(json_string);
+
+    // --> FETCH METHOD
+    fetch(file_path).then(response => {
+        return response.json();
+    }).then(data => alert(data));
+};
+
+// --> GAMES <--
+// Anagram
 function runAnagramGame() {
-    let word_one = document.getElementById("input-one").value;
-    let word_two = document.getElementById("input-two").value;
+    let word_one = document.getElementById("input-one").value.toUpperCase();
+    let word_two = document.getElementById("input-two").value.toUpperCase();
     word_one = word_one.split("").sort().join("");
     word_two = word_two.split("").sort().join("");
 
@@ -38,6 +51,7 @@ function runAnagramGame() {
     document.getElementsByClassName("game-result")[0].innerHTML = result;
 };
 
+// Rock-Paper-Scissors
 function runRockPaperScissorsGame() {
     const computer_choice_variants = {
         0: 'Камень',
@@ -71,4 +85,39 @@ function runRockPaperScissorsGame() {
     document.getElementById("rps-computer-choice").value = computer_choice_text;
     document.getElementsByClassName("game-result")[0].style.display = "block";
     document.getElementsByClassName("game-result")[0].innerHTML = result;
+};
+
+// Riddles
+function runRiddlesGame() {
+    riddles_json = `
+      [
+        {
+          "id": 0,
+          "text": "Летает без крыльев, плачет без глаз",
+          "answer": "ТУЧА"
+        },
+        {
+          "id": 1,
+          "text": "Из какого слова из семи букв можно убрать одну 'букву', чтобы осталось две буквы?",
+          "answer": "БУКВАРЬ"
+        },
+        {
+          "id": 2,
+          "text": "Идет то в гору, то с горы, но остается на месте.",
+          "answer": "ДОРОГА"
+        },
+        {
+          "id": 3,
+          "text": "Где встречается такое, что конь через коня перепрыгивает?",
+          "answer": "ШАХМАТЫ"
+        },
+        {
+          "id": 4,
+          "text": "Какой знак нужно поставить между 6 и 7, чтобы результат оказался меньше 7 и больше 6?",
+          "answer": "ЗАПЯТАЯ"
+        }
+      ]
+    `;
+
+
 };
