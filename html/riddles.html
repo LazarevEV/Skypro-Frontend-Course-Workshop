@@ -12,17 +12,21 @@
         <div class="game-wrapper">
             <div class="game-pane centered">
                 <div class="game-description">
-                    <h1 class="game-description intro-header">Анаграмма</h1>
-                    <p class="game-description intro-paragraph">Введи два слова и проверь, являются ли они анаграммой</p>
+                    <h1 class="game-description intro-header">Загадки</h1>
+                    <p class="game-description intro-paragraph">Сможешь отгадать ответ на случайную загадку за 3 попытки?<br>На ответ дается 60 секунд</p>
                 </div>
                 <div class="game-pane">
-                    <input class="game-input" type="text" id="input-one" placeholder="WORD 1" onchange="resetResultField()">
-                    <input class="game-input" type="text" id="input-two" placeholder="WORD 2" onchange="resetResultField()">
+                    <select class="game-input" id="rps-select" onchange="resetResultField()">
+                        <option value="Камень">Камень</option>
+                        <option value="Ножницы">Ножницы</option>
+                        <option value="Бумага">Бумага</option>
+                    </select>
+                    <input class="game-output" type="text" id="rps-computer-choice" placeholder="ОТВЕТ ОППОНЕНТА" disabled>
                 </div>
                 <div class="game-result">
 
                 </div>
-                <button class="basic-button" onclick="runAnagramGame()">RUN</button>
+                <button class="basic-button" onclick="runRockPaperScissorsGame()">RUN</button>
             </div>
             <img class="game-image" src="../img/game_image.png" alt="Game Cover">
         </div>

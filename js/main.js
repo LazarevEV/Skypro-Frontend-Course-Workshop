@@ -10,6 +10,12 @@ function openGamePane(game_id) {
 
 function resetResultField() {
     document.getElementsByClassName("game-result")[0].style.display = "none";
+    // Clear field for certain game
+    try {
+        document.getElementById("rps-computer-choice").value = "";
+    } catch (error) {
+
+    };
 }
 
 // GAMES
@@ -32,6 +38,37 @@ function runAnagramGame() {
     document.getElementsByClassName("game-result")[0].innerHTML = result;
 };
 
-function runGame(game_id) {
-    runAnagramGame()
+function runRockPaperScissorsGame() {
+    const computer_choice_variants = {
+        0: 'Камень',
+        1: 'Ножницы',
+        2: 'Бумага',
+    };
+
+    let player_choice_text = document.getElementById("rps-select").value;
+    let player_choice_id = Object.keys(computer_choice_variants).find(key => computer_choice_variants[key] === player_choice_text)
+    let computer_choice_id = Math.floor(Math.random() * 3);
+    let computer_choice_text = computer_choice_variants[computer_choice_id];
+
+    let delta = player_choice_id - computer_choice_id;
+
+    // let result = ""
+    // switch (player_choice_id - computer_choice_id) {
+    //     case 0:
+    //         result = "НИЧЬЯ!";
+    //         break;
+    //     case -1:
+    //         result = "ВЫ ВЫИГРАЛИ!";
+    //         break;
+    //     case 2:
+    //         result = "ВЫ ВЫИГРАЛИ!";
+    //         break;
+    //     default:
+    //         result = "ВЫ ПРОИГРАЛИ!";
+    // };
+    let result = (delta === -1) || (delta === 2) ? "ВЫ ВЫИГРАЛИ!" : (delta === 0) ? "НИЧЬЯ!" : "ВЫ ПРОИГРАЛИ!";
+
+    document.getElementById("rps-computer-choice").value = computer_choice_text;
+    document.getElementsByClassName("game-result")[0].style.display = "block";
+    document.getElementsByClassName("game-result")[0].innerHTML = result;
 };
