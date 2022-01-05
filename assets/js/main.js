@@ -4,7 +4,7 @@ function moveToGameMenu() {
 
 function openGamePane(game_id) {
     document.getElementsByClassName("game-html")[0].style.display = "block";
-    document.getElementsByClassName("game-html")[0].innerHTML = `<object type="text/html" data="html/${game_id}.html" style="width:100%;height:100vh;"></object>`;
+    document.getElementsByClassName("game-html")[0].innerHTML = `<object type="text/html" data="assets/html/${game_id}.html" style="width:100%;height:100vh;"></object>`;
     document.getElementsByClassName("game-html")[0].scrollIntoView({block: "start", behavior: "smooth"});
 };
 
@@ -33,18 +33,18 @@ function readJSON(file_path) {
 // --> GAMES <--
 // Anagram
 function runAnagramGame() {
-    let word_one = document.getElementById("input-one").value.toUpperCase();
-    let word_two = document.getElementById("input-two").value.toUpperCase();
-    word_one = word_one.split("").sort().join("");
-    word_two = word_two.split("").sort().join("");
+    let wordOne = document.getElementById("input-one").value.toUpperCase();
+    let wordTwo = document.getElementById("input-two").value.toUpperCase();
+    wordOne = wordOne.split("").sort().join("");
+    wordTwo = wordTwo.split("").sort().join("");
 
     let result = ""
-    if (word_one === "" || word_two === "") {
+    if (wordOne === "" || wordTwo === "") {
         result = "INPUTS ARE EMPTY. <b>ENTER WORDS</b>";
-    } else if (word_one.match(/\d+/g) != null || word_two.match(/\d+/g) != null) {
+    } else if (wordOne.match(/\d+/g) != null || wordTwo.match(/\d+/g) != null) {
         result = "ONE OF THE <b>INPUT CONTAINS DIGIT</b>"
     } else {
-        result = word_one === word_two ? "WORDS ARE <b>ANAGRAM</b>" : "WORDS ARE <b>NOT ANAGRAM</b>";
+        result = wordOne === wordTwo ? "WORDS ARE <b>ANAGRAM</b>" : "WORDS ARE <b>NOT ANAGRAM</b>";
     }
 
     document.getElementsByClassName("game-result")[0].style.display = "block";
@@ -52,22 +52,37 @@ function runAnagramGame() {
 };
 
 // Rock-Paper-Scissors
-function runRockPaperScissorsGame() {
-    const computer_choice_variants = {
-        0: 'Камень',
-        1: 'Ножницы',
-        2: 'Бумага',
+let playerChoiceText = "";
+
+function resetActiveChoice() {
+    playerChoiceText = "";  
+    if (document.getElementsByClassName("rps-choice-button active")[0]) {
+        document.getElementsByClassName("rps-choice-button active")[0].classList.remove("active");
+    };
+};
+
+function setPlayerChoice(buttonId) {
+    resetActiveChoice();
+
+    playerChoiceText = buttonId;    
+    document.getElementById(buttonId).classList.add("active");
+};
+
+function computeRockPaperScissorsGame() {
+    const computerChoiceVariants = {
+        0: 'rock',
+        1: 'scissors',
+        2: 'paper',
     };
 
-    let player_choice_text = document.getElementById("rps-select").value;
-    let player_choice_id = Object.keys(computer_choice_variants).find(key => computer_choice_variants[key] === player_choice_text)
-    let computer_choice_id = Math.floor(Math.random() * 3);
-    let computer_choice_text = computer_choice_variants[computer_choice_id];
+    let playerChoiceId = Object.keys(computerChoiceVariants).find(key => computerChoiceVariants[key] === playerChoiceText)
+    let computerChoiceId = Math.floor(Math.random() * 3);
+    let computerChoiceIconUrl = `../img/rock-paper-scissors/${computerChoiceVariants[computerChoiceId]}_icon.png`;
 
-    let delta = player_choice_id - computer_choice_id;
+    let delta = playerChoiceId - computerChoiceId;
 
     // let result = ""
-    // switch (player_choice_id - computer_choice_id) {
+    // switch (playerChoiceId - computerChoiceId) {
     //     case 0:
     //         result = "НИЧЬЯ!";
     //         break;
@@ -82,14 +97,23 @@ function runRockPaperScissorsGame() {
     // };
     let result = (delta === -1) || (delta === 2) ? "ВЫ ВЫИГРАЛИ!" : (delta === 0) ? "НИЧЬЯ!" : "ВЫ ПРОИГРАЛИ!";
 
-    document.getElementById("rps-computer-choice").value = computer_choice_text;
+    document.getElementsByClassName("rps-choice-opponent")[0].src = computerChoiceIconUrl;
     document.getElementsByClassName("game-result")[0].style.display = "block";
     document.getElementsByClassName("game-result")[0].innerHTML = result;
+}
+
+function runRockPaperScissorsGame() {
+    if (playerChoiceText === "") {
+        document.getElementsByClassName("game-result")[0].style.display = "block";
+        document.getElementsByClassName("game-result")[0].innerHTML = "ВЫБЕРИТЕ ОТВЕТ!"; 
+    } else {
+        computeRockPaperScissorsGame();
+    };
 };
 
 // Riddles
 function runRiddlesGame() {
-    riddles_json = `
+    riddlesJson = `
       [
         {
           "id": 0,

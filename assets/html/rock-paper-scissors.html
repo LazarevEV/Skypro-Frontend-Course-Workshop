@@ -16,12 +16,20 @@
                     <p class="game-description intro-paragraph">Выбери один из объектов и посмотри, сможешь ли обыграть оппонента</p>
                 </div>
                 <div class="game-pane">
-                    <select class="game-input" id="rps-select" onchange="resetResultField()">
-                        <option value="Камень">Камень</option>
-                        <option value="Ножницы">Ножницы</option>
-                        <option value="Бумага">Бумага</option>
-                    </select>
-                    <input class="game-output" type="text" id="rps-computer-choice" placeholder="ОТВЕТ ОППОНЕНТА" disabled>
+                    <div class="rps-choice-wrapper">
+                        <button class="rps-choice-button" id="rock" onclick="setPlayerChoice(this.id)">
+                            <img src="../img/rock-paper-scissors/rock_icon.png">
+                        </button>
+                        <button class="rps-choice-button" id="scissors" onclick="setPlayerChoice(this.id)">
+                            <img src="../img/rock-paper-scissors/scissors_icon.png">
+                        </button>
+                        <button class="rps-choice-button" id="paper" onclick="setPlayerChoice(this.id)">
+                            <img src="../img/rock-paper-scissors/paper_icon.png">
+                        </button>
+                        <span class="rps-text-versus">VS</span>
+                        <img class="rps-choice-opponent" src="../img/rock-paper-scissors/opponent_unselected_icon.png" alt="Opponent Unselected">
+                    </div>
+                    <!-- <input class="game-output" type="text" id="rps-computer-choice" placeholder="ОТВЕТ ОППОНЕНТА" disabled> -->
                 </div>
                 <div class="game-result">
 

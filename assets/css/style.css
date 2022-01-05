@@ -192,4 +192,49 @@ body {
   padding-left: 24px;
   margin-top: 44px;
 }
+
+.rps-choice-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  margin-top: 44px;
+  margin-left: 24px;
+}
+
+.rps-text-versus {
+  font-size: 36px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+.rps-choice-button {
+  width: 64px;
+  height: 64px;
+  background: none;
+  border: none;
+  border-radius: 50%;
+}
+
+.rps-choice-button img {
+  width: 100%;
+  height: 100%;
+}
+
+.rps-choice-button:hover {
+  cursor: url("../img/pointer_cursor.png"), auto;
+  outline: 4px solid #9C0332;
+}
+
+.rps-choice-button.active {
+  outline: 4px solid #9C0332;
+}
+
+.rps-choice-opponent {
+  width: 64px;
+  height: 64px;
+}
 /*# sourceMappingURL=style.css.map */
