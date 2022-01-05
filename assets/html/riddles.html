@@ -13,20 +13,22 @@
             <div class="game-pane centered">
                 <div class="game-description">
                     <h1 class="game-description intro-header">Загадки</h1>
-                    <p class="game-description intro-paragraph">Сможешь отгадать ответ на случайную загадку за 3 попытки?<br>На ответ дается 60 секунд</p>
+                    <p class="game-description intro-paragraph">Сможешь отгадать ответ на случайную загадку за 3 попытки?</p>
                 </div>
-                <div class="game-pane">
-                    <select class="game-input" id="rps-select" onchange="resetResultField()">
-                        <option value="Камень">Камень</option>
-                        <option value="Ножницы">Ножницы</option>
-                        <option value="Бумага">Бумага</option>
-                    </select>
-                    <input class="game-output" type="text" id="rps-computer-choice" placeholder="ОТВЕТ ОППОНЕНТА" disabled>
+                <div class="game-pane riddles">
+                    <p class="riddle-text">Текст загадки</p>
+                    <div class="riddle-lifes">
+                        <img class="life-icon full" src="../img/heart_icon_filled.png" alt="Life Full">
+                        <img class="life-icon full" src="../img/heart_icon_filled.png" alt="Life Full">
+                        <img class="life-icon full" src="../img/heart_icon_filled.png" alt="Life Full">
+                    </div>
+                    <input class="game-input" type="text" id="input-one" placeholder="ВВЕДИТЕ ОТВЕТ">
                 </div>
-                <div class="game-result">
-
+                <div class="game-result"></div>
+                <div class="riddles-button-pane">
+                    <button class="basic-button" id="riddle-answer-button" onclick="submitAnswer()">ОТВЕТИТЬ</button>
+                    <button class="basic-button" onclick="runRiddlesGame()">RUN</button>
                 </div>
-                <button class="basic-button" onclick="runRiddlesGame()">RUN</button>
             </div>
             <img class="game-image" src="../img/game_image.png" alt="Game Cover">
         </div>

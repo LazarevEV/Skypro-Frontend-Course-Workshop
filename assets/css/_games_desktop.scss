@@ -110,3 +110,44 @@
     width: 64px;
     height: 64px;
 }
+
+// Riddles
+.game-pane.riddles {
+    display: none;
+}
+
+.riddle-text {
+    max-width: 481px;
+    line-height: 32px;
+    font-weight: 200;
+    font-size: 18px;
+    font-style: normal;
+
+    padding-top: 32px;
+}
+
+.riddles-button-pane {
+    display: flex;
+    gap: 24px;
+}
+
+#riddle-answer-button {
+    display: none;
+}
+
+#riddle-answer-button:disabled {
+    background: #303030;
+}
+
+.riddle-lifes {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 24px;
+    // margin-left: 12px;
+}
+
+.riddle-lifes img {
+    width: 32px;
+    width: 32px;
+}
