@@ -2,7 +2,7 @@ let riddlesJson = `
   [
     {
       "id": 0,
-      "text": "Летает без крыльев, плачет без глаз",
+      "text": "Что летает, не имея крыльев, и плачет, не имея глаз?",
       "answer": "ТУЧА"
     },
     {
@@ -48,13 +48,12 @@ function runRiddlesGame() {
     chosenRiddleId = Math.floor(Math.random() * 5);
     document.getElementsByClassName("riddle-text")[0].innerHTML = riddles.find(riddle => riddle.id === chosenRiddleId)['text'];
 
-    document.getElementsByClassName("game-description intro-paragraph")[0].style.display = "none";
-    if (window.matchMedia(" (max-width: 767px)")) {
-		document.getElementsByClassName("riddles-wrapper")[0].style.display = "flex";
-    } else {
-        document.getElementsByClassName("riddles-wrapper")[0].style.display = "block";
-    }
-    
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      document.getElementsByClassName("riddles-wrapper")[0].style.display = "flex";
+      } else {
+          document.getElementsByClassName("riddles-wrapper")[0].style.display = "block";
+      }
+    document.getElementsByClassName("game-description intro-paragraph")[0].style.display = "none";    
     document.getElementById("riddle-answer-button").style.display = "block";
 };
 
