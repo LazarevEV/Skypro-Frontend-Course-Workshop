@@ -65,6 +65,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 32px;
+  min-height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #000915;
   padding-top: 128px;
   padding-bottom: 128px;

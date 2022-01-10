@@ -1,5 +1,9 @@
 function moveToGameMenu() {
-    document.getElementsByClassName("game-menu")[0].scrollIntoView({block: "center", behavior: "smooth"});
+    if (window.matchMedia("(max-width: 767px)").matches) {
+        document.getElementsByClassName("game-menu")[0].scrollIntoView({block: "start", behavior: "smooth"});
+    } else {
+        document.getElementsByClassName("game-menu")[0].scrollIntoView({block: "center", behavior: "smooth"});
+    }
 };
 
 function openGamePane(game_id) {

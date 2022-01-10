@@ -68,7 +68,10 @@ body {
 .game-menu {
     display: flex;
     gap: 32px;
+    min-height: 100vh;
+    align-items: center;
     background: #000915;
+
     padding-top: 128px;
     padding-bottom: 128px;
 }

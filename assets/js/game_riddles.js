@@ -49,10 +49,10 @@ function runRiddlesGame() {
     document.getElementsByClassName("riddle-text")[0].innerHTML = riddles.find(riddle => riddle.id === chosenRiddleId)['text'];
 
     if (window.matchMedia("(max-width: 767px)").matches) {
-      document.getElementsByClassName("riddles-wrapper")[0].style.display = "flex";
+      	document.getElementsByClassName("riddles-wrapper")[0].style.display = "flex";
       } else {
-          document.getElementsByClassName("riddles-wrapper")[0].style.display = "block";
-      }
+        document.getElementsByClassName("riddles-wrapper")[0].style.display = "block";
+    }
     document.getElementsByClassName("game-description intro-paragraph")[0].style.display = "none";    
     document.getElementById("riddle-answer-button").style.display = "block";
 };
