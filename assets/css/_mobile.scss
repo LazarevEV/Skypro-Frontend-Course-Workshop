@@ -1,0 +1,36 @@
+@media (max-width: 767px) {
+    .centered {
+        padding-left: calc(max(calc(50% - 178px), 12px));
+        padding-right: calc(max(calc(50% - 178px), 12px));
+    }
+
+    .intro {
+        box-sizing: border-box;
+        min-height: 735px;
+        height: 735px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 217px;
+
+        background-position: center;
+        background-size: 300%;
+    }
+
+    .intro-header {
+        max-width: 362px;
+        line-height: 40px;
+        font-weight: 600;
+        font-size: 32px;
+        font-style: normal;
+        text-align: center;
+    }
+
+    .intro-paragraph {
+        line-height: 32px;
+        font-weight: 200;
+        font-size: 16px;
+    
+        text-align: center;
+    }
+}

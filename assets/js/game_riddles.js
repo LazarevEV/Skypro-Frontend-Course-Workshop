@@ -49,7 +49,12 @@ function runRiddlesGame() {
     document.getElementsByClassName("riddle-text")[0].innerHTML = riddles.find(riddle => riddle.id === chosenRiddleId)['text'];
 
     document.getElementsByClassName("game-description intro-paragraph")[0].style.display = "none";
-    document.getElementsByClassName("game-pane riddles")[0].style.display = "block";
+    if (window.matchMedia(" (max-width: 767px)")) {
+		document.getElementsByClassName("riddles-wrapper")[0].style.display = "flex";
+    } else {
+        document.getElementsByClassName("riddles-wrapper")[0].style.display = "block";
+    }
+    
     document.getElementById("riddle-answer-button").style.display = "block";
 };
 

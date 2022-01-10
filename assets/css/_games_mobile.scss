@@ -1,0 +1,90 @@
+@media (max-width: 767px) {
+    // GAME CSS 
+    .game-description.intro-header {
+        line-height: 40px;
+        font-size: 32px;
+    }
+
+    .game-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .game-card {
+        min-width: 342px;
+        min-height: 300px;
+        width: 342px;
+        height: 300px;
+    }
+
+    .game-image {
+        display: none;
+    }
+
+    .game-pane {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-result {
+        display: none;
+        font-size: 24px;
+        text-align: center;
+    
+        padding-left: 0;
+        margin-top: 44px;
+    }
+
+    // Rock-Paper-Scissors
+    .rps-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        margin-top: 44px;
+    }
+
+    .rps-choice-wrapper {
+        margin-left: 0;
+    }
+    
+    .rps-text-versus, .rps-choice-opponent {
+        margin-top: 22px;
+    }
+
+    // Riddles
+    .riddles-button-pane {
+        flex-direction: column;
+    }
+
+    .riddles-wrapper {
+        display: none;
+        flex-direction: column;
+        min-width: 328px;
+        align-items: center;
+    }
+
+    .riddle-text {
+        line-height: 32px;
+        font-size: 16px;
+
+        text-align: center;
+    }
+
+    .game-input {
+        margin-right: 0;
+    }
+
+    .riddles-button-pane > .basic-button {
+        margin-top: 0;
+    }
+
+    .riddles-button-pane {
+        margin-top: 42px;
+    }
+}

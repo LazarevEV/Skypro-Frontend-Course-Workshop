@@ -15,7 +15,7 @@
                     <h1 class="game-description intro-header">Камень, ножницы, бумага</h1>
                     <p class="game-description intro-paragraph">Выбери один из объектов и посмотри, сможешь ли обыграть оппонента</p>
                 </div>
-                <div class="game-pane">
+                <div class="rps-wrapper">
                     <div class="rps-choice-wrapper">
                         <button class="rps-choice-button" id="rock" onclick="setPlayerChoice(this.id)">
                             <img src="../img/rock-paper-scissors/rock_icon.png">
@@ -26,9 +26,9 @@
                         <button class="rps-choice-button" id="paper" onclick="setPlayerChoice(this.id)">
                             <img src="../img/rock-paper-scissors/paper_icon.png">
                         </button>
-                        <span class="rps-text-versus">VS</span>
-                        <img class="rps-choice-opponent" src="../img/rock-paper-scissors/opponent_unselected_icon.png" alt="Opponent Unselected">
                     </div>
+                    <span class="rps-text-versus">VS</span>
+                    <img class="rps-choice-opponent" src="../img/rock-paper-scissors/opponent_unselected_icon.png" alt="Opponent Unselected">
                     <!-- <input class="game-output" type="text" id="rps-computer-choice" placeholder="ОТВЕТ ОППОНЕНТА" disabled> -->
                 </div>
                 <div class="game-result">
@@ -39,5 +39,6 @@
             <img class="game-image" src="../img/game_image.png" alt="Game Cover">
         </div>
         <script src="../js/game_rock_paper_scissors.js"></script>
+        <script src="../js/main.js"></script>
     </body>
 </html>

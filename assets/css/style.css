@@ -193,12 +193,21 @@ body {
   margin-top: 44px;
 }
 
+.rps-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 44px;
+}
+
 .rps-choice-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 24px;
-  margin-top: 44px;
   margin-left: 24px;
 }
 
@@ -238,7 +247,7 @@ body {
   height: 64px;
 }
 
-.game-pane.riddles {
+.riddles-wrapper {
   display: none;
 }
 
@@ -277,5 +286,144 @@ body {
 .riddle-lifes img {
   width: 32px;
   width: 32px;
+}
+
+@media (max-width: 767px) {
+  .centered {
+    padding-left: calc(max(calc(50% - 178px), 12px));
+    padding-right: calc(max(calc(50% - 178px), 12px));
+  }
+  .intro {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    min-height: 735px;
+    height: 735px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 217px;
+    background-position: center;
+    background-size: 300%;
+  }
+  .intro-header {
+    max-width: 362px;
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 32px;
+    font-style: normal;
+    text-align: center;
+  }
+  .intro-paragraph {
+    line-height: 32px;
+    font-weight: 200;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .game-description.intro-header {
+    line-height: 40px;
+    font-size: 32px;
+  }
+  .game-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .game-card {
+    min-width: 342px;
+    min-height: 300px;
+    width: 342px;
+    height: 300px;
+  }
+  .game-image {
+    display: none;
+  }
+  .game-pane {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .game-result {
+    display: none;
+    font-size: 24px;
+    text-align: center;
+    padding-left: 0;
+    margin-top: 44px;
+  }
+  .rps-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 44px;
+  }
+  .rps-choice-wrapper {
+    margin-left: 0;
+  }
+  .rps-text-versus, .rps-choice-opponent {
+    margin-top: 22px;
+  }
+  .riddles-button-pane {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .riddles-wrapper {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: 328px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .riddle-text {
+    line-height: 32px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .game-input {
+    margin-right: 0;
+  }
+  .riddles-button-pane > .basic-button {
+    margin-top: 0;
+  }
+  .riddles-button-pane {
+    margin-top: 42px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
