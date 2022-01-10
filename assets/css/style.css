@@ -16,7 +16,8 @@ body {
 }
 
 .intro {
-  min-height: 1024px;
+  min-height: 720px;
+  height: 100vh;
   padding-top: 217px;
   background-image: url("../img/intro_background.jpg");
   background-size: cover;
@@ -296,8 +297,10 @@ body {
   .intro {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    background-image: url("../img/intro_background_mobile.jpg");
+    background-size: cover;
     min-height: 735px;
-    height: 735px;
+    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -309,8 +312,6 @@ body {
         -ms-flex-align: center;
             align-items: center;
     padding-top: 217px;
-    background-position: center;
-    background-size: 300%;
   }
   .intro-header {
     max-width: 362px;
